@@ -6,5 +6,5 @@
     devtools::install_github("J-Cos/ArmsBiogeographyPackage")
     library(ArmsBiogeographyPackage)
 
-#### Convert your data to phyloseq object
+#### Get biogeographic variables for your data: isolation (distance to continental shelf) and area of seamount (proportion of a circle of given radius)
     BiogData<-GetBiogeographicVariablesForARMS(dat)
