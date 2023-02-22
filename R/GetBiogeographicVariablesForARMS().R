@@ -27,10 +27,10 @@ GetBiogeographicVariablesForARMS<- function(dat, shallowOceanBuffer=50000, shall
     print("Data Loading...")
         #format point data from input
             d<-dat %>%
-                select(ARMS, Site_Longitude, Site_Latitude) %>%
-                group_by(ARMS) %>%
-                summarise_all(mean) %>%
-                mutate(Site_Longitude= ifelse(test=Site_Longitude<0, yes=Site_Longitude+ 360, no=Site_Longitude)) %>%
+                dplyr::select(ARMS, Site_Longitude, Site_Latitude) %>%
+                dplyr::group_by(ARMS) %>%
+                dplyr::summarise_all(mean) %>%
+                dplyr::mutate(Site_Longitude= ifelse(test=Site_Longitude<0, yes=Site_Longitude+ 360, no=Site_Longitude)) %>%
                 as.data.frame
             rownames(d)<-d$ARMS    
             d<-d[,c(2,3)] %>% as.matrix
