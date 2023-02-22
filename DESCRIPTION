@@ -1,0 +1,21 @@
+Package: ArmsBiogeographyPackage
+Title: Obtains biogeographic variables (area and isolation data) for ARMS units
+Version: 0.0.0.9000
+Imports:
+    geosphere (>= 1.5.14),
+    igraph (>= 1.3.5),
+    raster (>= 3.6.3),
+    sp (>= 1.5.1),
+    tidyverse (>= 1.3.2)
+Authors@R: 
+    person("Jake", "Williams", , "j.williams20@imperial.ac.uk", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Obtains biogeographic variables (area and isolation data) for ARMS units
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Depends: 
+    R (>= 2.10)
+LazyData: true
