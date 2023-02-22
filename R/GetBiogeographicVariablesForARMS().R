@@ -6,7 +6,7 @@
 #' @param dat inout dataframe
 #' @param shallowOceanBuffer the radius of the circle within which to calculate the proportion of shallow ocean (metres). default 50km
 #' @param shallowDepth the depth of ocean up to which it is considered shallow, default 200m
-#' @return A dataframe containing the ARMs identifier, area, and distance. Also contains the LatLong of the ARMS and the id of the continental shelf which was found to be closest
+#' @return A dataframe containing the ARMs identifier, area, and distance. Also contains the LatLong of the closest point on the continental shelf and the id of that continental shelf (eurasian (1) or australasian (2))
 #' @export
 
 GetBiogeographicVariablesForARMS<- function(dat, shallowOceanBuffer=50000, shallowDepth=200) {
