@@ -7,20 +7,23 @@
 GetBiogeographicVariablesForARMS(
   dat,
   shallowOceanBuffer = 50000,
-  shallowDepth = 200
+  shallowDepth = 200,
+  stressRadius = 30000
 )
 }
 \arguments{
-\item{dat}{inout dataframe}
+\item{dat}{input dataframe with three columns titles: ARMS, Site_Longitude, Site_Latitude}
 
-\item{shallowOceanBuffer}{the radius of the circle within which to calculate the proportion of shallow ocean (metres). default 50km}
+\item{shallowOceanBuffer}{the radius of the circle within which to calculate the proportion of shallow ocean (metres). Default 50km}
 
-\item{shallowDepth}{the depth of ocean up to which it is considered shallow, default 200m}
+\item{shallowDepth}{the depth of ocean up to which it is considered shallow, Default 200m}
+
+\item{stressRadius}{the radius of the circle from which the nearest stress value is drawn, default (metres). Default 30km}
 }
 \value{
-A dataframe containing the ARMs identifier, area, and distance. Also contains the LatLong of the ARMS and the id of the continental shelf which was found to be closest
+A dataframe containing the ARMs identifier, area, and distance. Also contains the LatLong of the closest point on the continental shelf and the id of that continental shelf (eurasian (1) or australasian (2))
 }
 \description{
 This function accepts a dataframe with columns of 'ARMS' 'Site_Longitude' and 'Site_Latitude'
-and returns a dataframe with the seamount area and isolation associated with each ARMS unit.
+and returns a dataframe with the seamount area, isolation and stressor values associated with each ARMS unit.
 }
