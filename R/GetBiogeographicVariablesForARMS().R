@@ -139,7 +139,7 @@ GetBiogeographicVariablesForARMS<- function(dat, shallowOceanBuffer=50000, shall
             print("Bathymetry data loaded")
 
         # Load stress data
-            load('/home/j/Dropbox/CrossPacific_Paper/Data/allreefs.RData')
+            load(file='data/allreefs.RData')
             print("Stress data loaded")
 
     #areas
