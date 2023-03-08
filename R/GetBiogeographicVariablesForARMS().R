@@ -134,14 +134,6 @@ GetBiogeographicVariablesForARMS<- function(dat, shallowOceanBuffer=50000, shall
             d<-d[,c(2,3)] %>% as.matrix
             print("LatLongs extracted from input")
 
-        # Load ETOPO data
-            load(file="data/etopo.rda")
-            print("Bathymetry data loaded")
-
-        # Load stress data
-            load(file='data/allreefs.RData')
-            print("Stress data loaded")
-
     #areas
     print("Calculating shallow sea areas...")
 
