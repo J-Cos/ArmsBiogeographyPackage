@@ -1,10 +1,13 @@
 Package: ArmsBiogeographyPackage
-Title: Obtains biogeographic variables (area and isolation data) for ARMS units
+Title: Obtains biogeographic variables (area and isolation data) and stress (Andrello et al., 2022) for ARMS units
 Version: 0.0.0.9000
 Imports:
     geosphere (>= 1.5.14),
     igraph (>= 1.3.5),
     raster (>= 3.6.3),
+    rgdal (>= 1.5.32),
+    rgeos (>= 0.5.9),
+    sf (>= 1.0.8),
     sp (>= 1.5.1),
     tidyverse (>= 1.3.2)
 Authors@R: 
