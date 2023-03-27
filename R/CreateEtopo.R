@@ -13,6 +13,12 @@
                     raster::aggregate(fact=3)
             etopo3 <- raster::raster(file.path(path, "Data", "exportImage(2).tiff")) %>%
                     raster::aggregate(fact=3)
-            etopo<-raster::merge(etopo1, etopo2, etopo3, tolerance=0.2)
+            etopo4 <- raster::raster(file.path(path, "Data", "exportImage(3).tiff")) %>%
+                    raster::aggregate(fact=3)
+            etopo5 <- raster::raster(file.path(path, "Data", "exportImage(4).tiff")) %>%
+                    raster::aggregate(fact=3)
+            etopo6 <- raster::raster(file.path(path, "Data", "exportImage(5).tiff")) %>%
+                    raster::aggregate(fact=3)
+            etopo<-raster::merge(etopo1, etopo2, etopo3,etopo4, etopo5, etopo6, tolerance=0.2)
 
         usethis::use_data(etopo, overwrite=TRUE)
