@@ -8,6 +8,7 @@ GetBiogeographicVariablesForARMS(
   dat,
   shallowOceanBuffer = 50000,
   shallowDepth = 200,
+  NumberShelves = 2,
   stressRadius = 30000
 )
 }
@@ -18,10 +19,12 @@ GetBiogeographicVariablesForARMS(
 
 \item{shallowDepth}{the depth of ocean up to which it is considered shallow, Default 200m}
 
+\item{NumberShelves}{the number of seperate continental shelves to allow. Default =2 as this picks up australasia and eurasia - for mot locations in the indo-pacific. Need to be more cautiious in the arabian sea, red sea and east african coast due to very deep water coasts in (roughly) Oman, Somalia and Mozambique. Dependent on the ShallowDepth parameter and the bathymetry map resolution this can result in the eurasian costline being split into more pieces. Inspect the map output by the function to view the contientental shelves used in the isolation calculation.}
+
 \item{stressRadius}{the radius of the circle from which the nearest stress value is drawn, default (metres). Default 30km}
 }
 \value{
-A dataframe containing the ARMs identifier, area, and distance. Also contains the LatLong of the closest point on the continental shelf and the id of that continental shelf (eurasian (1) or australasian (2))
+A list. The first item is a dataframe containing the ARMs identifier, area, and distance. Also contains the LatLong of the closest point on the continental shelf and the id of that continental shelf (ordered by size). The second item is a map of those continental shelves used in the isolation calculation.
 }
 \description{
 This function accepts a dataframe with columns of 'ARMS' 'Site_Longitude' and 'Site_Latitude'

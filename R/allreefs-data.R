@@ -11,6 +11,6 @@
 #'
 #' @source https://github.com/WCS-Marine/local-reef-pressures
 #'
-#' @examples
+#' @examples NA
 #' 
 "allreefs"
