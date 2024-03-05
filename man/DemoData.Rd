@@ -17,7 +17,7 @@ data(DemoData)
 Demonstration data to test package
 }
 \examples{
-GetBiogeographicVariablesForARMS(DemoData, shallowOceanBuffer=50000, shallowDepth=200, NumberShelves=2, stressRadius=30000)
+GetBiogeographicVariablesForARMS(DemoData)
 
 }
 \references{

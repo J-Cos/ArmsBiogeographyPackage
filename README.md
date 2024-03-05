@@ -7,4 +7,4 @@
     library(ArmsBiogeographyPackage)
 
 #### Get biogeographic variables for your data: isolation (distance to continental shelf) and area of seamount (proportion of a circle of given radius)
-    BiogData<-GetBiogeographicVariablesForARMS(dat)
+    BiogData<-GetBiogeographicVariablesForARMS(DemoData)

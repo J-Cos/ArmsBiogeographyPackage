@@ -24,7 +24,7 @@ GetBiogeographicVariablesForARMS(
 \item{stressRadius}{the radius of the circle from which the nearest stress value is drawn, default (metres). Default 30km}
 }
 \value{
-A list. The first item is a dataframe containing the ARMs identifier, area, and distance. Also contains the LatLong of the closest point on the continental shelf and the id of that continental shelf (ordered by size). The second item is a map of those continental shelves used in the isolation calculation.
+A dataframe containing the ARMs identifier, area, and distance. Also contains the LatLong of the closest point on the continental shelf and the id of that continental shelf (ordered by size).
 }
 \description{
 This function accepts a dataframe with columns of 'ARMS' 'Site_Longitude' and 'Site_Latitude'
